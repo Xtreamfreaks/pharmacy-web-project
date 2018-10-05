@@ -1,7 +1,7 @@
-<!-- <?php
+<?php
 	session_start();
 ?>
- -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,16 +11,90 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <title>Medilite</title>
 <link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/owl.carousel.min.css">
+<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
 <link type="text/css" href="css/style.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/navfooter.css">
 <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+};
+
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+};
+</script>
+<script type="text/javascript">
+	$(document).ready(function() {
+ 
+  $("#owl-demo").owlCarousel({
+     
+     items : 4,
+     loop  : false,
+     margin : 30,
+     nav    : true,
+     smartSpeed :900,
+     navText : ["<button style='position: absolute;top: 40%;margin-left: -20px;display: block!IMPORTANT;left:20px;border:0px solid black;' class='btn btn-primary'><</button>","<button class='btn btn-primary' style='position: absolute;top: 40%;margin-right: -20px;display: block!IMPORTANT;right:20px;border:0px solid black;'>></button>"]
+   });
+
+
+  $("#owl-demo1").owlCarousel({
+     
+     items : 4,
+     loop  : false,
+     margin : 30,
+     nav    : true,
+     smartSpeed :900,
+     navText : ["<button style='position: absolute;top: 40%;margin-left: -20px;display: block!IMPORTANT;left:20px;border:0px solid black;' class='btn btn-primary'><</button>","<button class='btn btn-primary' style='position: absolute;top: 40%;margin-right: -20px;display: block!IMPORTANT;right:20px;border:0px solid black;'>></button>"]
+   });
+ 
+});
+	
+</script>
+<script>
+
+/* Onpage linkng smooth effect */
+
+$('a[href^="#"]').on('click', function(event) {
+
+    var target = $( $(this).attr('href') );
+
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    }
+
+});
+
+</script>
+
 </head>
 <body>
 <!-- Navigation -->
+
 <?php
 include_once 'includes/header.php';
 ?>
+
+
+
 
 <!-- Jump to top -->
 <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-circle-up"></i></button>
@@ -33,15 +107,15 @@ include_once 'includes/header.php';
 		<li data-target="#slides" data-slide-to="2"></li>
 	</ul>
 <div class="carousel-inner">
-	<div class="carousel-item active"><img src="images/301876.jpg">
-		<div class="carousel-caption">
+	<div class="carousel-item active"><img src="images/bg1.jpg">
+		<!-- <div class="carousel-caption">
 			<h1 class="display-2">With better user interface</h1>
 			<h3>New update</h3>
 			<button type="button" class="btn btn-outline-light btn-lg">VIEW DEMO</button>
 			<button type="button" class="btn btn-primary btn-large">GET STARTED</button>
-		</div></div>
-	<div class="carousel-item"><img src="images/301842.jpg"></div>
-	<div class="carousel-item"><img src="images/301876.jpg"></div>
+		</div> --></div>
+	<div class="carousel-item"><img src="images/bg2.jpg"></div>
+	<div class="carousel-item"><img src="images/bg3.jpg"></div>
 </div>
 </div>
 
@@ -56,6 +130,125 @@ include_once 'includes/header.php';
 			<a href="#"><button type="button" class="btn btn-outline-secondary btn-lg">Lets go.</button></a>
 		</div>
 	</div>
+</div>
+
+<!-- Owl carousel -->
+<div id="owl-demo" class="owl-carousel owl-theme">
+	<div class="item">
+		<div class="card1">
+		  <img src="images/jeans3.jpg" alt="Denim Jeans" style="width:100%">
+		  <h3>Tailored Jeans</h3>
+		  <p class="price">$19.99</p>
+		  <p>Some text about the jeans..</p>
+		  <p><button>Add to Cart</button></p>
+		</div>
+	</div>
+
+	<div class="item">
+		<div class="card1">
+		  <img src="images/jeans3.jpg" alt="Denim Jeans" style="width:100%">
+		  <h3>Tailored Jeans</h3>
+		  <p class="price">$19.99</p>
+		  <p>Some text about the jeans..</p>
+		  <p><button>Add to Cart</button></p>
+		</div>
+	</div>
+	<div class="item">
+		<div class="card1">
+		  <img src="images/jeans3.jpg" alt="Denim Jeans" style="width:100%">
+		  <h3>Tailored Jeans</h3>
+		  <p class="price">$19.99</p>
+		  <p>Some text about the jeans..</p>
+		  <p><button>Add to Cart</button></p>
+		</div>
+	</div>
+	<div class="item">
+		<div class="card1">
+		  <img src="images/jeans3.jpg" alt="Denim Jeans" style="width:100%">
+		  <h3>Tailored Jeans</h3>
+		  <p class="price">$19.99</p>
+		  <p>Some text about the jeans..</p>
+		  <p><button>Add to Cart</button></p>
+		</div>
+	</div>
+	<div class="item">
+		<div class="card1">
+		  <img src="images/jeans3.jpg" alt="Denim Jeans" style="width:100%">
+		  <h3>Tailored Jeans</h3>
+		  <p class="price">$19.99</p>
+		  <p>Some text about the jeans..</p>
+		  <p><button>Add to Cart</button></p>
+		</div>
+	</div>
+	
+			<button type="button"  style="margin-top: 60%" class="text-center btn btn-outline-dark btn-lg">View more<i class="fa fa-angle-double-right"></i></button>
+	
+
+	</div>
+
+	<div id="owl-demo1" class="owl-carousel owl-theme">
+	<div class="item">
+		<div class="card1">
+		  <img src="images/jeans3.jpg" alt="Denim Jeans" style="width:100%">
+		  <h3>Tailored Jeans</h3>
+		  <p class="price">$19.99</p>
+		  <p>Some text about the jeans..</p>
+		  <p><button>Add to Cart</button></p>
+		</div>
+	</div>
+
+	<div class="item">
+		<div class="card1">
+		  <img src="images/jeans3.jpg" alt="Denim Jeans" style="width:100%">
+		  <h3>Tailored Jeans</h3>
+		  <p class="price">$19.99</p>
+		  <p>Some text about the jeans..</p>
+		  <p><button>Add to Cart</button></p>
+		</div>
+	</div>
+	<div class="item">
+		<div class="card1">
+		  <img src="images/jeans3.jpg" alt="Denim Jeans" style="width:100%">
+		  <h3>Tailored Jeans</h3>
+		  <p class="price">$19.99</p>
+		  <p>Some text about the jeans..</p>
+		  <p><button>Add to Cart</button></p>
+		</div>
+	</div>
+	<div class="item">
+		<div class="card1">
+		  <img src="images/jeans3.jpg" alt="Denim Jeans" style="width:100%">
+		  <h3>Tailored Jeans</h3>
+		  <p class="price">$19.99</p>
+		  <p>Some text about the jeans..</p>
+		  <p><button>Add to Cart</button></p>
+		</div>
+	</div>
+	<div class="item">
+		<div class="card1">
+		  <img src="images/jeans3.jpg" alt="Denim Jeans" style="width:100%">
+		  <h3>Tailored Jeans</h3>
+		  <p class="price">$19.99</p>
+		  <p>Some text about the jeans..</p>
+		  <p><button>Add to Cart</button></p>
+		</div>
+	</div>
+	<div class="item">
+		<div class="card1">
+		  <img src="images/jeans3.jpg" alt="Denim Jeans" style="width:100%">
+		  <h3>Tailored Jeans</h3>
+		  <p class="price">$19.99</p>
+		  <p>Some text about the jeans..</p>
+		  <p><button>Add to Cart</button></p>
+		</div>
+	</div>
+	
+
+		<button type="button" style="margin-top: 60%" class="text-center btn btn-outline-dark btn-lg">View more<i class="fa fa-angle-double-right"></i></button>
+	
+
+         
+  
 </div>
 
 
@@ -98,7 +291,7 @@ include_once 'includes/header.php';
 </div>
 
 <!--- Two Column Section -->
-<div class="container-fluid">
+<!-- <div class="container-fluid">
 	<div class="row padding">
 		<div class="col-lg-6">
 			<h2>Lorem Ipsum</h2>
@@ -115,7 +308,7 @@ include_once 'includes/header.php';
 		 
 	</div>
 </div>
-<hr class="my-4">
+<hr class="my-4"> -->
 
 
 <!--- Fixed background -->
@@ -128,7 +321,7 @@ include_once 'includes/header.php';
 
 
 <!--- Emoji Section -->
-<button class="fun btn-warning btn-outline-secondary" data-toggle="collapse" data-target="#emoji" >Click 4 fun</button>
+<!-- <button class="fun btn-warning btn-outline-secondary" data-toggle="collapse" data-target="#emoji" >Click 4 fun</button>
 <div id="emoji" class="collapse">
 	<div class="container-fluid padding">
 		<div class="row text-center">
@@ -148,7 +341,7 @@ include_once 'includes/header.php';
 	</div>
 	
 </div>
-<hr class="my-4">
+<hr class="my-4"> -->
   
 <!--- Meet the team -->
 <div class="container-fluid padding" id ="team">
@@ -335,56 +528,14 @@ include_once 'includes/header.php';
 
 
 
+
 <!--- Footer -->
 <?php
 include_once 'includes/footer.php';
+
 ?>
 
-<script>
-window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("myBtn").style.display = "block";
-    } else {
-        document.getElementById("myBtn").style.display = "none";
-    }
-};
-
-function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-};
-</script>
-<script>
-	
-	if ((".loader").length) {
-    // show Preloader until the website ist loaded
-    $(window).on('load', function () {
-    $(".loader").fadeOut("slow");
-    });
-};
-
-/* Onpage linkng smooth effect */
-
-$('a[href^="#"]').on('click', function(event) {
-
-    var target = $( $(this).attr('href') );
-
-    if( target.length ) {
-        event.preventDefault();
-        $('html, body').animate({
-            scrollTop: target.offset().top
-        }, 1000);
-    }
-
-});
-
-</script>
-
-
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
 

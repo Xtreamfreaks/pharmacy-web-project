@@ -39,6 +39,11 @@ if (isset($_POST['submit'])) {
 					$_SESSION['curr_fname'] = $row['fname'];
 					$_SESSION['curr_lname'] = $row['lname'];
 					$_SESSION['curr_email'] = $row['email'];
+					$_SESSION['curr_mobile'] = $row['mobile'];
+					$_SESSION['curr_address'] = $row['address1'];
+					$_SESSION['curr_city'] = $row['city'];
+					$_SESSION['curr_state'] = $row['state'];
+					$_SESSION['curr_zip'] = $row['zip'];
 					header("Location: ../index.php?login=success");
 					exit();
 				}

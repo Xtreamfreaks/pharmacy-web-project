@@ -1,5 +1,9 @@
 <?php
 session_start();
+
+if (isset($_SESSION['curr_id'])) {
+  header("Location: index.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -40,6 +44,12 @@ session_start();
   overflow-x: hidden;
 }
 
+.fa-user{
+	font-size: 4rem;
+	margin-bottom: 20px;
+
+}
+
   </style>
 </head>
 <body id="bg">
@@ -55,7 +65,7 @@ session_start();
 	
 	<div class="col-md-4 col-sm-4 col-xs-12">
 	<form action="includes/login.inc.php" method="POST" class="form-container f2">
-		<center><h1>Login</h1></center>
+		<center><i class="fa fa-user"></i></center>
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
