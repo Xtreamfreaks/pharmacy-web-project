@@ -127,7 +127,7 @@ include_once 'includes/header.php';
 			<p class="lead">​Come find the prescription medication you need at Pharmacy. Our knowledgeable and licensed specialists are ready to quickly prepare the medicines you require and answer any related questions. If you’re a new patient or need information regarding generic or OTC medicine, please get in touch and we’ll be happy to assist you.</p>
 		</div>
 		<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
-			<a href="#"><button type="button" class="btn btn-outline-secondary btn-lg">Lets go.</button></a>
+			<a href="#owl-demo"><button type="button" class="btn btn-outline-secondary btn-lg">Lets go.</button></a>
 		</div>
 	</div>
 </div>
@@ -136,7 +136,7 @@ include_once 'includes/header.php';
 <div id="owl-demo" class="owl-carousel owl-theme">
 	<div class="item">
 		<div class="card1">
-		  <img src="images/jeans3.jpg" alt="Denim Jeans" style="width:100%">
+		  <img src="images/m1.jpg" alt="Denim Jeans" style="width:100%">
 		  <h3>Tailored Jeans</h3>
 		  <p class="price">$19.99</p>
 		  <p>Some text about the jeans..</p>
@@ -146,7 +146,7 @@ include_once 'includes/header.php';
 
 	<div class="item">
 		<div class="card1">
-		  <img src="images/jeans3.jpg" alt="Denim Jeans" style="width:100%">
+		  <img src="images/m2.jpg" alt="Denim Jeans" style="width:100%">
 		  <h3>Tailored Jeans</h3>
 		  <p class="price">$19.99</p>
 		  <p>Some text about the jeans..</p>
@@ -155,7 +155,7 @@ include_once 'includes/header.php';
 	</div>
 	<div class="item">
 		<div class="card1">
-		  <img src="images/jeans3.jpg" alt="Denim Jeans" style="width:100%">
+		  <img src="images/m3.jpg" alt="Denim Jeans" style="width:100%">
 		  <h3>Tailored Jeans</h3>
 		  <p class="price">$19.99</p>
 		  <p>Some text about the jeans..</p>
@@ -164,7 +164,7 @@ include_once 'includes/header.php';
 	</div>
 	<div class="item">
 		<div class="card1">
-		  <img src="images/jeans3.jpg" alt="Denim Jeans" style="width:100%">
+		  <img src="images/m4.jpg" alt="Denim Jeans" style="width:100%">
 		  <h3>Tailored Jeans</h3>
 		  <p class="price">$19.99</p>
 		  <p>Some text about the jeans..</p>
@@ -173,7 +173,7 @@ include_once 'includes/header.php';
 	</div>
 	<div class="item">
 		<div class="card1">
-		  <img src="images/jeans3.jpg" alt="Denim Jeans" style="width:100%">
+		  <img src="images/m5.jpg" alt="Denim Jeans" style="width:100%">
 		  <h3>Tailored Jeans</h3>
 		  <p class="price">$19.99</p>
 		  <p>Some text about the jeans..</p>
@@ -181,7 +181,7 @@ include_once 'includes/header.php';
 		</div>
 	</div>
 	
-			<button type="button"  style="margin-top: 60%" class="text-center btn btn-outline-dark btn-lg">View more<i class="fa fa-angle-double-right"></i></button>
+			<a style="margin-top: 60%" class="text-center btn btn-outline-dark btn-lg"href="product.php">View more<i class="fa fa-angle-double-right"></i></a>
 	
 
 	</div>
@@ -189,7 +189,7 @@ include_once 'includes/header.php';
 	<div id="owl-demo1" class="owl-carousel owl-theme">
 	<div class="item">
 		<div class="card1">
-		  <img src="images/jeans3.jpg" alt="Denim Jeans" style="width:100%">
+		  <img src="images/m6.jpg" alt="Denim Jeans" style="width:100%">
 		  <h3>Tailored Jeans</h3>
 		  <p class="price">$19.99</p>
 		  <p>Some text about the jeans..</p>
@@ -199,7 +199,7 @@ include_once 'includes/header.php';
 
 	<div class="item">
 		<div class="card1">
-		  <img src="images/jeans3.jpg" alt="Denim Jeans" style="width:100%">
+		  <img src="images/m7.jpg" alt="Denim Jeans" style="width:100%">
 		  <h3>Tailored Jeans</h3>
 		  <p class="price">$19.99</p>
 		  <p>Some text about the jeans..</p>
@@ -208,7 +208,7 @@ include_once 'includes/header.php';
 	</div>
 	<div class="item">
 		<div class="card1">
-		  <img src="images/jeans3.jpg" alt="Denim Jeans" style="width:100%">
+		  <img src="images/m8.jpg" alt="Denim Jeans" style="width:100%">
 		  <h3>Tailored Jeans</h3>
 		  <p class="price">$19.99</p>
 		  <p>Some text about the jeans..</p>
@@ -217,7 +217,7 @@ include_once 'includes/header.php';
 	</div>
 	<div class="item">
 		<div class="card1">
-		  <img src="images/jeans3.jpg" alt="Denim Jeans" style="width:100%">
+		  <img src="images/m9.jpg" alt="Denim Jeans" style="width:100%">
 		  <h3>Tailored Jeans</h3>
 		  <p class="price">$19.99</p>
 		  <p>Some text about the jeans..</p>
@@ -226,7 +226,7 @@ include_once 'includes/header.php';
 	</div>
 	<div class="item">
 		<div class="card1">
-		  <img src="images/jeans3.jpg" alt="Denim Jeans" style="width:100%">
+		  <img src="images/m10.jpg" alt="Denim Jeans" style="width:100%">
 		  <h3>Tailored Jeans</h3>
 		  <p class="price">$19.99</p>
 		  <p>Some text about the jeans..</p>
@@ -235,7 +235,7 @@ include_once 'includes/header.php';
 	</div>
 	<div class="item">
 		<div class="card1">
-		  <img src="images/jeans3.jpg" alt="Denim Jeans" style="width:100%">
+		  <img src="images/tm10.jpg" alt="Denim Jeans" style="width:100%">
 		  <h3>Tailored Jeans</h3>
 		  <p class="price">$19.99</p>
 		  <p>Some text about the jeans..</p>
@@ -244,7 +244,7 @@ include_once 'includes/header.php';
 	</div>
 	
 
-		<button type="button" style="margin-top: 60%" class="text-center btn btn-outline-dark btn-lg">View more<i class="fa fa-angle-double-right"></i></button>
+		<a style="margin-top: 60%" class="text-center btn btn-outline-dark btn-lg"href="product.php">View more<i class="fa fa-angle-double-right"></i></a>
 	
 
          
@@ -489,15 +489,15 @@ include_once 'includes/header.php';
         <div class="col-md-3 text-center">
             <ul class="list-unstyled mb-0">
                 <li><i class="fa fa-map-marker fa-2x"></i>
-                    <p>San Francisco, CA 94126, USA</p>
+                    <p>Mumbai, Maharashtra</p>
                 </li>
 
                 <li><i class="fa fa-phone mt-4 fa-2x"></i>
-                    <p>+ 01 234 567 89</p>
+                    <p>022 24033993</p>
                 </li>
 
                 <li><i class="fa fa-envelope mt-4 fa-2x"></i>
-                    <p>contact@mdbootstrap.com</p>
+                    <p>contact@medilite.com</p>
                 </li>
             </ul>
         </div>

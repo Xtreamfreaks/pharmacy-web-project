@@ -13,7 +13,7 @@ if (isset($_SESSION['curr_id'])) {
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Login</title>
+  
   <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
   <link rel="stylesheet" type="text/css"  href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/navfooter.css">

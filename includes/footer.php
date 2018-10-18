@@ -24,14 +24,14 @@
 				<h2 class="font-weight-bold">Services</h2>
 				<hr class="light"> 
 				<p></p>
-				<p>Service1</p>
-				<p>Service2</p>
-				<p>Service3</p>
+				<p>T&C</p>
+				<p>R&D</p>
+				<p>Customer Care</p>
 			</div>
 
 		<div class="col-12">
 			<hr class="light-100">
-			<h5>&copy; w3newbie.com</h5>
+			<h5>&copy; medilite.com</h5>
 			<hr class="light-100">
 		</div>
 
