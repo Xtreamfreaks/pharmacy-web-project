@@ -1,13 +1,3 @@
-<?php
-session_start();
-if(!isset($_SESSION['curr_id'])){
-  header("Location: login.php");
-}
-require_once 'includes/dbh.inc.php';
-
-  
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,9 +40,9 @@ require_once 'includes/dbh.inc.php';
 
 
 .card1 {
-  -webkit-box-shadow: 1px 1px 12px 1px rgba(0,0,0,0.75);
-  -moz-box-shadow: 1px 1px 12px 1px rgba(0,0,0,0.75);
-  box-shadow: 1px 1px 12px 1px rgba(0,0,0,0.75);
+   -webkit-box-shadow: 1px 1px 12px 1px rgba(0,0,0,0.75);
+-moz-box-shadow: 1px 1px 12px 1px rgba(0,0,0,0.75);
+box-shadow: 1px 1px 12px 1px rgba(0,0,0,0.75);
   max-width: 300px;
   margin: auto;
   text-align: center;
@@ -97,97 +87,62 @@ margin: 0;
 
 
   </style>
-  <script type="text/javascript">
-  function cartFunction(){
-  alert("Item added to cart");
-}
-</script>
-
 </head>
 <body>
     <?php
     include_once 'includes/header.php';
     ?>
     <div class="container-grid" id="grid1">
-      <?php
-      $sql = "SELECT * FROM medicines WHERE medicine_id='1'";
-      $result = mysqli_query($conn,$sql);
-      $row=mysqli_fetch_assoc($result);
-      echo '
+
         <div class="box product1">
         <div class="card1">
           <img src="images/m1.jpg" alt="Denim Jeans" style="width:100%">
-          <h3>'.$row["Name"].'</h3>
-          <p class="price">'.$row["Price"].' Rs</p>
-          <p>'.$row["Benefits"].'</p>
-          <p><button class="addToCart" onclick="cartFunction()" data-id="'.$row["medicine_id"].'" name="addCart">Add to Cart</button></p>
+          <h3>Tailored Jeans</h3>
+          <p class="price">$19.99</p>
+          <p>Some text about the jeans..</p>
+          <p><button>Add to Cart</button></p>
         </div>
-        </div> ';
-        ?>
+        </div>
 
-        <?php
-      $sql = "SELECT * FROM medicines WHERE medicine_id='2'";
-      $result = mysqli_query($conn,$sql);
-      $row=mysqli_fetch_assoc($result);
-      echo '
-        <div class="box product1">
-        <div class="card1">
+        <div class="box product2">
+            <div class="card1">
           <img src="images/m2.jpg" alt="Denim Jeans" style="width:100%">
-          <h3>'.$row["Name"].'</h3>
-          <p class="price">'.$row["Price"].' Rs</p>
-          <p>'.$row["Benefits"].'</p>
-          <p><button class="addToCart" onclick="cartFunction()" data-id="'.$row["medicine_id"].'" name="addCart">Add to Cart</button></p>
+          <h3>Tailored Jeans</h3>
+          <p class="price">$19.99</p>
+          <p>Some text about the jeans..</p>
+          <p><button>Add to Cart</button></p>
         </div>
-        </div> ';
-        ?>
-        
-        <?php
-      $sql = "SELECT * FROM medicines WHERE medicine_id='3'";
-      $result = mysqli_query($conn,$sql);
-      $row=mysqli_fetch_assoc($result);
-      echo '
-        <div class="box product1">
-        <div class="card1">
+        </div>
+
+        <div class="box product3">
+            <div class="card1">
           <img src="images/m3.jpg" alt="Denim Jeans" style="width:100%">
-          <h3>'.$row["Name"].'</h3>
-          <p class="price">'.$row["Price"].' Rs</p>
-          <p>'.$row["Benefits"].'</p>
-          <p><button class="addToCart" onclick="cartFunction()" data-id="'.$row["medicine_id"].'" name="addCart">Add to Cart</button></p>
+          <h3>Tailored Jeans</h3>
+          <p class="price">$19.99</p>
+          <p>Some text about the jeans..</p>
+          <p><button>Add to Cart</button></p>
         </div>
-        </div> ';
-        ?>
+        </div>
 
-        <?php
-      $sql = "SELECT * FROM medicines WHERE medicine_id='4'";
-      $result = mysqli_query($conn,$sql);
-      $row=mysqli_fetch_assoc($result);
-      echo '
-        <div class="box product1">
-        <div class="card1">
+        <div class="box product4">
+            <div class="card1">
           <img src="images/m4.jpg" alt="Denim Jeans" style="width:100%">
-          <h3>'.$row["Name"].'</h3>
-          <p class="price">'.$row["Price"].' Rs</p>
-          <p>'.$row["Benefits"].'</p>
-          <p><button class="addToCart" onclick="cartFunction()" data-id="'.$row["medicine_id"].'" name="addCart">Add to Cart</button></p>
+          <h3>Tailored Jeans</h3>
+          <p class="price">$19.99</p>
+          <p>Some text about the jeans..</p>
+          <p><button>Add to Cart</button></p>
         </div>
-        </div> ';
-        ?>
+        </div>
 
-        <?php
-      $sql = "SELECT * FROM medicines WHERE medicine_id='5'";
-      $result = mysqli_query($conn,$sql);
-      $row=mysqli_fetch_assoc($result);
-      echo '
-        <div class="box product1">
-        <div class="card1">
+        <div class="box product5">
+            <div class="card1">
           <img src="images/m5.jpg" alt="Denim Jeans" style="width:100%">
-          <h3>'.$row["Name"].'</h3>
-          <p class="price">'.$row["Price"].' Rs</p>
-          <p>'.$row["Benefits"].'</p>
-          <p><button class="addToCart" onclick="cartFunction()" data-id="'.$row["medicine_id"].'" name="addCart">Add to Cart</button></p>
+          <h3>Tailored Jeans</h3>
+          <p class="price">$19.99</p>
+          <p>Some text about the jeans..</p>
+          <p><button>Add to Cart</button></p>
         </div>
-        </div> ';
-        ?>
+        </div>
 
         <div class="box product6">
         <div class="card1">
@@ -195,7 +150,7 @@ margin: 0;
           <h3>Tailored Jeans</h3>
           <p class="price">$19.99</p>
           <p>Some text about the jeans..</p>
-          <p><button class="addToCart" name="addCart">Add to Cart</button></p>
+          <p><button>Add to Cart</button></p>
         </div>
     </div>
 
@@ -205,7 +160,7 @@ margin: 0;
           <h3>Tailored Jeans</h3>
           <p class="price">$19.99</p>
           <p>Some text about the jeans..</p>
-          <p><button class="addToCart" name="addCart">Add to Cart</button></p>
+          <p><button>Add to Cart</button></p>
         </div></div>
 
         <div class="box product8">
@@ -214,7 +169,7 @@ margin: 0;
           <h3>Tailored Jeans</h3>
           <p class="price">$19.99</p>
           <p>Some text about the jeans..</p>
-          <p><button class="addToCart" name="addCart">Add to Cart</button></p>
+          <p><button>Add to Cart</button></p>
         </div></div>
 
         <div class="box product9">
@@ -223,7 +178,7 @@ margin: 0;
           <h3>Tailored Jeans</h3>
           <p class="price">$19.99</p>
           <p>Some text about the jeans..</p>
-          <p><button class="addToCart" name="addCart">Add to Cart</button></p>
+          <p><button>Add to Cart</button></p>
         </div>
         </div>
     </div>
@@ -236,7 +191,7 @@ margin: 0;
           <h3>Tailored Jeans</h3>
           <p class="price">$19.99</p>
           <p>Some text about the jeans..</p>
-          <p><button class="addToCart" name="addCart">Add to Cart</button></p>
+          <p><button>Add to Cart</button></p>
         </div>
         </div>
 
@@ -246,7 +201,7 @@ margin: 0;
           <h3>Tailored Jeans</h3>
           <p class="price">$19.99</p>
           <p>Some text about the jeans..</p>
-          <p><button class="addToCart" name="addCart">Add to Cart</button></p>
+          <p><button>Add to Cart</button></p>
         </div>
         </div>
 
@@ -256,7 +211,7 @@ margin: 0;
           <h3>Tailored Jeans</h3>
           <p class="price">$19.99</p>
           <p>Some text about the jeans..</p>
-          <p><button class="addToCart" name="addCart">Add to Cart</button></p>
+          <p><button>Add to Cart</button></p>
         </div>
         </div>
 
@@ -266,7 +221,7 @@ margin: 0;
           <h3>Tailored Jeans</h3>
           <p class="price">$19.99</p>
           <p>Some text about the jeans..</p>
-          <p><button class="addToCart" name="addCart">Add to Cart</button></p>
+          <p><button>Add to Cart</button></p>
         </div>
         </div>
 
@@ -276,7 +231,7 @@ margin: 0;
           <h3>Tailored Jeans</h3>
           <p class="price">$19.99</p>
           <p>Some text about the jeans..</p>
-          <p><button class="addToCart" name="addCart">Add to Cart</button></p>
+          <p><button>Add to Cart</button></p>
         </div>
         </div>
 
@@ -286,7 +241,7 @@ margin: 0;
           <h3>Tailored Jeans</h3>
           <p class="price">$19.99</p>
           <p>Some text about the jeans..</p>
-          <p><button class="addToCart" name="addCart">Add to Cart</button></p>
+          <p><button>Add to Cart</button></p>
         </div>
     </div>
 
@@ -296,7 +251,7 @@ margin: 0;
           <h3>Tailored Jeans</h3>
           <p class="price">$19.99</p>
           <p>Some text about the jeans..</p>
-          <p><button class="addToCart" name="addCart">Add to Cart</button></p>
+          <p><button>Add to Cart</button></p>
         </div></div>
 
         <div class="box product8">
@@ -305,7 +260,7 @@ margin: 0;
           <h3>Tailored Jeans</h3>
           <p class="price">$19.99</p>
           <p>Some text about the jeans..</p>
-          <p><button class="addToCart" name="addCart">Add to Cart</button></p>
+          <p><button>Add to Cart</button></p>
         </div></div>
 
         <div class="box product9">
@@ -314,7 +269,7 @@ margin: 0;
           <h3>Tailored Jeans</h3>
           <p class="price">$19.99</p>
           <p>Some text about the jeans..</p>
-          <p><button class="addToCart" name="addCart">Add to Cart</button></p>
+          <p><button>Add to Cart</button></p>
         </div>
         </div>
     </div>
@@ -324,9 +279,6 @@ margin: 0;
             <button class="btn btn-primary" onclick="toPage2()">2</button>
         </p></center>
     </div>
-
-
-
 <?php
     include_once 'includes/footer.php';
     ?>

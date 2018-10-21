@@ -14,8 +14,8 @@
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav ml-auto">
 
-				<li class="nav-item active"><a class="nav-link" href="#slides">Home</a></li>
-				<li class="nav-item"><a class="nav-link" href="#Products">Shop</a></li>
+				<li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li>
+				<li class="nav-item"><a class="nav-link" href="product.php">Shop</a></li>
 				<li class="nav-item"><a class="nav-link" href="index.php#team">Team</a></li>
 				<li class="nav-item"><a class="nav-link" href="index.php#about">About</a></li>
 				<li class="nav-item"><a class="nav-link" href="index.php#contact">Contact</a></li>
@@ -42,7 +42,7 @@
 					    </div></li>';
 					}
 				?>
-				<li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-shopping-cart"></i></a></li>
+				<li class="nav-item"><a class="nav-link" href="pay.php"><i class="fa fa-shopping-cart"></i></a></li>
 				<li>
 					<form class="form-container" id="search">
 						<div class="form-row">

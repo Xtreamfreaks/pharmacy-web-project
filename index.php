@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	require_once 'includes/dbh.inc.php';
 ?>
 
 <!DOCTYPE html>
@@ -41,27 +42,30 @@ function topFunction() {
 </script>
 <script type="text/javascript">
 	$(document).ready(function() {
- 
-  $("#owl-demo").owlCarousel({
-     
-     items : 4,
+   $("#owl-demo").owlCarousel({
+    
+     items : 5,
      loop  : false,
-     margin : 30,
-     nav    : true,
+     margin : 10,
+     nav    : false,
      smartSpeed :900,
-     navText : ["<button style='position: absolute;top: 40%;margin-left: -20px;display: block!IMPORTANT;left:20px;border:0px solid black;' class='btn btn-primary'><</button>","<button class='btn btn-primary' style='position: absolute;top: 40%;margin-right: -20px;display: block!IMPORTANT;right:20px;border:0px solid black;'>></button>"]
+     
    });
 
 
   $("#owl-demo1").owlCarousel({
      
-     items : 4,
-     loop  : false,
-     margin : 30,
-     nav    : true,
+     items : 5,
+     loop  : true,
+     margin : 10,
+     nav    : false,
      smartSpeed :900,
-     navText : ["<button style='position: absolute;top: 40%;margin-left: -20px;display: block!IMPORTANT;left:20px;border:0px solid black;' class='btn btn-primary'><</button>","<button class='btn btn-primary' style='position: absolute;top: 40%;margin-right: -20px;display: block!IMPORTANT;right:20px;border:0px solid black;'>></button>"]
+     autoplay:true,
+    autoplayTimeout:3000,
+    autoplayHoverPause:true
+     // navText : ["<button style='position: absolute;top: 40%;margin-left: -20px;display: block!IMPORTANT;left:20px;border:0px solid black;' class='btn btn-primary'><</button>","<button class='btn btn-primary' style='position: absolute;top: 40%;margin-right: -20px;display: block!IMPORTANT;right:20px;border:0px solid black;'>></button>"]
    });
+
  
 });
 	
@@ -83,6 +87,11 @@ $('a[href^="#"]').on('click', function(event) {
 
 });
 
+</script>
+<script type="text/javascript">
+	function cartFunction(){
+	alert("Item added to cart");
+}
 </script>
 
 </head>
@@ -133,53 +142,84 @@ include_once 'includes/header.php';
 </div>
 
 <!-- Owl carousel -->
+<form>
 <div id="owl-demo" class="owl-carousel owl-theme">
+ <?php
+      $sql = "SELECT * FROM medicines WHERE medicine_id='1'";
+      $result = mysqli_query($conn,$sql);
+      $row=mysqli_fetch_assoc($result);
+      echo '
 	<div class="item">
 		<div class="card1">
 		  <img src="images/m1.jpg" alt="Denim Jeans" style="width:100%">
-		  <h3>Tailored Jeans</h3>
-		  <p class="price">$19.99</p>
-		  <p>Some text about the jeans..</p>
-		  <p><button>Add to Cart</button></p>
+		  <h3>'.$row["Name"].'</h3>
+		  <p class="price">'.$row["Price"].' Rs</p>
+		  <p>'.$row["Benefits"].'</p>
+		  <p><button name="addCart" onclick="cartFunction()">Add to Cart</button></p>
 		</div>
-	</div>
+	</div>';
+        ?>
 
+	<?php
+      $sql = "SELECT * FROM medicines WHERE medicine_id='2'";
+      $result = mysqli_query($conn,$sql);
+      $row=mysqli_fetch_assoc($result);
+      echo '
 	<div class="item">
 		<div class="card1">
 		  <img src="images/m2.jpg" alt="Denim Jeans" style="width:100%">
-		  <h3>Tailored Jeans</h3>
-		  <p class="price">$19.99</p>
-		  <p>Some text about the jeans..</p>
-		  <p><button>Add to Cart</button></p>
+		  <h3>'.$row["Name"].'</h3>
+		  <p class="price">'.$row["Price"].' Rs</p>
+		  <p>'.$row["Benefits"].'</p>
+		  <p><button name="addCart" onclick="cartFunction()">Add to Cart</button></p>
 		</div>
-	</div>
+	</div>';
+        ?>
+	<?php
+      $sql = "SELECT * FROM medicines WHERE medicine_id='3'";
+      $result = mysqli_query($conn,$sql);
+      $row=mysqli_fetch_assoc($result);
+      echo '
 	<div class="item">
 		<div class="card1">
 		  <img src="images/m3.jpg" alt="Denim Jeans" style="width:100%">
-		  <h3>Tailored Jeans</h3>
-		  <p class="price">$19.99</p>
-		  <p>Some text about the jeans..</p>
-		  <p><button>Add to Cart</button></p>
+		  <h3>'.$row["Name"].'</h3>
+		  <p class="price">'.$row["Price"].' Rs</p>
+		  <p>'.$row["Benefits"].'</p>
+		  <p><button name="addCart" onclick="cartFunction()">Add to Cart</button></p>
 		</div>
-	</div>
+	</div>';
+        ?>
+	<?php
+      $sql = "SELECT * FROM medicines WHERE medicine_id='4'";
+      $result = mysqli_query($conn,$sql);
+      $row=mysqli_fetch_assoc($result);
+      echo '
 	<div class="item">
 		<div class="card1">
 		  <img src="images/m4.jpg" alt="Denim Jeans" style="width:100%">
-		  <h3>Tailored Jeans</h3>
-		  <p class="price">$19.99</p>
-		  <p>Some text about the jeans..</p>
-		  <p><button>Add to Cart</button></p>
+		  <h3>'.$row["Name"].'</h3>
+		  <p class="price">'.$row["Price"].' Rs</p>
+		  <p>'.$row["Benefits"].'</p>
+		  <p><button name="addCart" onclick="cartFunction()">Add to Cart</button></p>
 		</div>
-	</div>
+	</div>';
+        ?>
+	<?php
+      $sql = "SELECT * FROM medicines WHERE medicine_id='5'";
+      $result = mysqli_query($conn,$sql);
+      $row=mysqli_fetch_assoc($result);
+      echo '
 	<div class="item">
 		<div class="card1">
 		  <img src="images/m5.jpg" alt="Denim Jeans" style="width:100%">
-		  <h3>Tailored Jeans</h3>
-		  <p class="price">$19.99</p>
-		  <p>Some text about the jeans..</p>
-		  <p><button>Add to Cart</button></p>
+		  <h3>'.$row["Name"].'</h3>
+		  <p class="price">'.$row["Price"].' Rs</p>
+		  <p>'.$row["Benefits"].'</p>
+		  <p><button name="addCart" onclick="cartFunction()">Add to Cart</button></p>
 		</div>
-	</div>
+	</div>';
+        ?>
 	
 			<a style="margin-top: 60%" class="text-center btn btn-outline-dark btn-lg"href="product.php">View more<i class="fa fa-angle-double-right"></i></a>
 	
@@ -193,7 +233,7 @@ include_once 'includes/header.php';
 		  <h3>Tailored Jeans</h3>
 		  <p class="price">$19.99</p>
 		  <p>Some text about the jeans..</p>
-		  <p><button>Add to Cart</button></p>
+		  <p><button name="addCart" onclick="cartFunction()">Add to Cart</button></p>
 		</div>
 	</div>
 
@@ -203,7 +243,7 @@ include_once 'includes/header.php';
 		  <h3>Tailored Jeans</h3>
 		  <p class="price">$19.99</p>
 		  <p>Some text about the jeans..</p>
-		  <p><button>Add to Cart</button></p>
+		  <p><button name="addCart" onclick="cartFunction()">Add to Cart</button></p>
 		</div>
 	</div>
 	<div class="item">
@@ -212,7 +252,7 @@ include_once 'includes/header.php';
 		  <h3>Tailored Jeans</h3>
 		  <p class="price">$19.99</p>
 		  <p>Some text about the jeans..</p>
-		  <p><button>Add to Cart</button></p>
+		  <p><button name="addCart" onclick="cartFunction()">Add to Cart</button></p>
 		</div>
 	</div>
 	<div class="item">
@@ -221,7 +261,7 @@ include_once 'includes/header.php';
 		  <h3>Tailored Jeans</h3>
 		  <p class="price">$19.99</p>
 		  <p>Some text about the jeans..</p>
-		  <p><button>Add to Cart</button></p>
+		  <p><button name="addCart" onclick="cartFunction()">Add to Cart</button></p>
 		</div>
 	</div>
 	<div class="item">
@@ -230,7 +270,7 @@ include_once 'includes/header.php';
 		  <h3>Tailored Jeans</h3>
 		  <p class="price">$19.99</p>
 		  <p>Some text about the jeans..</p>
-		  <p><button>Add to Cart</button></p>
+		  <p><button name="addCart" onclick="cartFunction()">Add to Cart</button></p>
 		</div>
 	</div>
 	<div class="item">
@@ -239,17 +279,23 @@ include_once 'includes/header.php';
 		  <h3>Tailored Jeans</h3>
 		  <p class="price">$19.99</p>
 		  <p>Some text about the jeans..</p>
-		  <p><button>Add to Cart</button></p>
+		  <p><button name="addCart" onclick="cartFunction()">Add to Cart</button></p>
 		</div>
 	</div>
-	
-
-		<a style="margin-top: 60%" class="text-center btn btn-outline-dark btn-lg"href="product.php">View more<i class="fa fa-angle-double-right"></i></a>
-	
+	<div class="item">
+		<div class="card1">
+		  <img src="images/tm10.jpg" alt="Denim Jeans" style="width:100%">
+		  <h3>Tailored Jeans</h3>
+		  <p class="price">$19.99</p>
+		  <p>Some text about the jeans..</p>
+		  <p><button name="addCart" onclick="cartFunction()">Add to Cart</button></p>
+		</div>
+	</div>
 
          
   
 </div>
+</form>
 
 
 <!--- Welcome Section -->
@@ -363,7 +409,7 @@ include_once 'includes/header.php';
 				</div>
 				<div class="card-body">
 					<h1 class="card-title">Saurav</h1>
-					<p class="card-text">This guy here knows HTML5.</p>
+					<p class="card-text">This guy here is the coolest.</p>
 				</div>
 			</div>
 		</div>

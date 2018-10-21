@@ -44,6 +44,10 @@ if (isset($_POST['submit'])) {
 					$_SESSION['curr_city'] = $row['city'];
 					$_SESSION['curr_state'] = $row['state'];
 					$_SESSION['curr_zip'] = $row['zip'];
+					$_SESSION['logged_in']=1;       
+			        $temp_id=rand(1,10000);
+			        $_SESSION['Order_no']=$temp_id;
+			        $_SESSION['totalamt']=0;
 					header("Location: ../index.php?login=success");
 					exit();
 				}
