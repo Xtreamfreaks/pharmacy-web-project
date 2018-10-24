@@ -38,19 +38,19 @@
 						<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 					    <a class="dropdown-item" href="login.php">Login</a>
 					    <a class="dropdown-item" href="register.php">New User</a>
-					    <a class="dropdown-item" href="login.php">Staff</a>
+					    <a class="dropdown-item" href="admin.php">Staff</a>
 					    </div></li>';
 					}
 				?>
 				<li class="nav-item"><a class="nav-link" href="pay.php"><i class="fa fa-shopping-cart"></i></a></li>
 				<li>
-					<form class="form-container" id="search">
+					<form class="form-container" id="search" method="POST" action="includes/searchit.php">
 						<div class="form-row">
 							<div class="col">
-                 			<input type="text" class="form-control" placeholder="Search">
+                 			<input type="text" name="searchit" class="form-control" placeholder="Search">
                  		</div>
                  			<div class="col">
-                			<button type="submit" class="btn btn-success"><i class="fa fa-search"></i></button>
+                			<input type="submit" style= "width:100px;" value="Search">
                 		</div>
                 		</div>
       				</form>

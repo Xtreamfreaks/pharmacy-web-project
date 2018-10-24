@@ -30,5 +30,6 @@ $recipient = "saurav123suresh@gmail.com";
 $mailheader = "From: $email \r\n";
 mail($recipient, $subject, $content, $mailheader) or die("Error!");
 print json_encode(array('message' => 'Email successfully sent!', 'code' => 1));
+header("Location: ../index.php");
 exit();
 ?>

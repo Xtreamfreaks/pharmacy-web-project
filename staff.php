@@ -30,20 +30,13 @@
 </style>
 <script type="text/javascript">
 	function myFunction(){
-		document.getElementById('disp_stock').classList.toggle("show");
+		// document.getElementById('disp_stock').classList.toggle("show");
 	}
 </script>
 </head>
 <body>
 <div class="container-fluid f3">
-	<!-- <ul class="nav nav-tabs nav-fill">
-		<li class="nav-item"><a class="nav-link active">Home</a></li>
-		<li class="nav-item"><a class="nav-link">Menu1</a></li>
-		<li class="n
-		av-item"><a class="nav-link">Menu2</a></li>
-		<li class="nav-item"><a class="nav-link">Menu3</a></li>
-	</ul> -->
-
+	
 <form class = "form-container" method = "POST">
   <p><i class="fa fa-check-square"></i><button id="btn1"  name="viewstock" class="btn btn-outline-dark btn-lg" onclick="myFunction()">View Stock</button></p>
 
